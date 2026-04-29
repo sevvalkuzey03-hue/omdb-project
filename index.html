@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OMDB Movie Finder</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>OMDB Movie Finder</h1>
+        <p>Type a movie name and instantly get its details.</p>
+      </header>
+
+      <section class="search-panel">
+        <form id="searchForm" class="search-form">
+          <div class="field">
+            <label for="movieInput">Movie Title</label>
+            <input
+              id="movieInput"
+              name="movie"
+              type="text"
+              placeholder="e.g. Inception"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="apiKeyInput">OMDB API Key</label>
+            <input
+              id="apiKeyInput"
+              name="apiKey"
+              type="text"
+              placeholder="e.g. 123abc45 (optional)"
+            />
+          </div>
+
+          <button id="searchButton" type="submit">Search</button>
+        </form>
+      </section>
+
+      <section id="message" class="message" aria-live="polite"></section>
+
+      <section id="result" class="result" aria-live="polite"></section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
